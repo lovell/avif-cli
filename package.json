@@ -1,6 +1,6 @@
 {
   "name": "avif",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Command line utility to convert images to AVIF",
   "author": "Lovell Fuller <npm@lovell.info>",
   "license": "Apache-2.0",
