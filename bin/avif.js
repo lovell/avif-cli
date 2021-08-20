@@ -6,6 +6,7 @@ const {
   lossless,
   quality,
   speed,
+  chromaSubsampling,
   overwrite,
   verbose,
 } = require("../lib/cli");
@@ -25,6 +26,7 @@ const avif = async () => {
         lossless,
         quality,
         speed,
+        chromaSubsampling,
         overwrite,
         verbose,
       })

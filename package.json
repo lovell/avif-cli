@@ -15,7 +15,7 @@
     "url": "git://github.com/lovell/avif-cli"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12.13.0"
   },
   "funding": {
     "url": "https://opencollective.com/libvips"
@@ -25,8 +25,8 @@
   ],
   "dependencies": {
     "glob": "^7.1.7",
-    "sharp": "^0.28.3",
-    "yargs": "^17.1.0"
+    "sharp": "^0.29.0",
+    "yargs": "^17.1.1"
   },
   "devDependencies": {
     "prettier": "^2.3.2"
