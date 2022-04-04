@@ -28,6 +28,9 @@ Exit code is non-zero if one or more errors occured.
                                                      [string] [default: "4:4:4"]
       --overwrite          Allow existing output files to be overwritten
                                                       [boolean] [default: false]
+      --append-ext         Add .avif to the file name, instead of replacing the
+                           existing extension (foo.jpg => foo.jpg.avif)
+                                                      [boolean] [default: false]
       --verbose            Write progress to stdout   [boolean] [default: false]
   -h, --help               Show help                                   [boolean]
       --version            Show version number                         [boolean]

@@ -8,6 +8,7 @@ const {
   speed,
   chromaSubsampling,
   overwrite,
+  appendExt,
   verbose,
 } = require("../lib/cli");
 const glob = require("../lib/glob");
@@ -28,6 +29,7 @@ const avif = async () => {
         speed,
         chromaSubsampling,
         overwrite,
+        appendExt,
         verbose,
       })
     )
