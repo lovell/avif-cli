@@ -25,10 +25,10 @@
   ],
   "dependencies": {
     "glob": "^7.2.0",
-    "sharp": "^0.29.3",
-    "yargs": "^17.3.0"
+    "sharp": "^0.30.3",
+    "yargs": "^17.3.1"
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.2"
   }
 }
