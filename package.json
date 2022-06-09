@@ -24,9 +24,9 @@
     "avif"
   ],
   "dependencies": {
-    "glob": "^7.2.0",
-    "sharp": "^0.30.3",
-    "yargs": "^17.3.1"
+    "glob": "^8.0.3",
+    "sharp": "^0.30.6",
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
     "prettier": "^2.6.2"
