@@ -23,9 +23,9 @@ const avif = async () => {
   }
   if (output) {
     try {
-        await fs.access(output, constants.W_OK);
+      await fs.access(output, constants.W_OK);
     } catch (e) {
-        await fs.mkdir(output, { recursive: true });
+      await fs.mkdir(output, { recursive: true });
     }
   }
   const results = await Promise.all(
