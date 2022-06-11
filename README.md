@@ -22,8 +22,11 @@ Options:
                                                           [string] [default: ""]
       --quality             Quality vs file size, 1 (lowest/smallest) to 100
                             (highest/largest)             [number] [default: 50]
-      --speed               CPU effort vs file size, 0 (slowest/smallest) to 8
-                            (fastest/largest)              [number] [default: 5]
+      --effort              CPU effort vs file size, 0 (fastest/largest) to 9
+                            (slowest/smallest)             [number] [default: 4]
+      --speed               Convert speed vs file size, 0 (slowest/smallest) to
+                            9 (fastest/largest)
+                                             [deprecated: use --effort] [number]
       --lossless            Use lossless compression  [boolean] [default: false]
       --chroma-subsampling  Set to '4:2:0' to use chroma subsampling
                          [string] [choices: "4:2:0", "4:4:4"] [default: "4:4:4"]
