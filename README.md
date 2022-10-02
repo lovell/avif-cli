@@ -1,6 +1,6 @@
 # avif-cli
 
-Command line utility to convert images to AVIF, requires Node.js 12.13.0+
+Command line utility to convert images to AVIF, requires Node.js 14.15.0+
 
 ## Usage
 
@@ -24,9 +24,6 @@ Options:
                             (highest/largest)             [number] [default: 50]
       --effort              CPU effort vs file size, 0 (fastest/largest) to 9
                             (slowest/smallest)             [number] [default: 4]
-      --speed               Convert speed vs file size, 0 (slowest/smallest) to
-                            9 (fastest/largest)
-                                             [deprecated: use --effort] [number]
       --lossless            Use lossless compression  [boolean] [default: false]
       --chroma-subsampling  Set to '4:2:0' to use chroma subsampling
                          [string] [choices: "4:2:0", "4:4:4"] [default: "4:4:4"]
@@ -51,5 +48,5 @@ npx avif --input="**/*.{jpg,jpeg}" --output="/another/path" --overwrite
 ```
 
 ```sh
-npx avif --input="images/*.*" --speed=0 --quality=30
+npx avif --input="images/*.*" --effort=0 --quality=30
 ```
