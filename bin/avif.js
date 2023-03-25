@@ -13,11 +13,11 @@ const {
   appendExt,
   verbose,
 } = require("../lib/cli");
-const glob = require("../lib/glob");
+const { glob } = require("glob");
 const convert = require("../lib/convert");
 
 const avif = async () => {
-  const files = await glob(input);
+  const files = await glob(input, { absolute: true, nodir: true });
   if (verbose) {
     process.stdout.write(`Found ${files.length} file(s) matching ${input}\n`);
   }
