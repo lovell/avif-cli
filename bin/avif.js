@@ -40,8 +40,8 @@ const avif = async () => {
         overwrite,
         appendExt,
         verbose,
-      })
-    )
+      }),
+    ),
   );
   process.exit(results.every(Boolean) ? 0 : 1);
 };
