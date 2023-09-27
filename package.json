@@ -24,11 +24,11 @@
     "avif"
   ],
   "dependencies": {
-    "glob": "^10.3.3",
-    "sharp": "^0.32.5",
+    "glob": "^10.3.10",
+    "sharp": "^0.32.6",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.3"
   }
 }
