@@ -4,13 +4,37 @@ Command line utility to convert images to AVIF, requires Node.js 14.15.0+
 
 ## Usage
 
-```sh
-$ npx avif
-```
-
 By default, will search current directory for image files and create AVIF variants.
 
-Exit code is non-zero if one or more errors occured.
+Exit code is non-zero if one or more errors occurred.
+
+### npm
+
+```sh
+npx avif
+```
+
+### pnpm
+
+```sh
+pnpm dlx avif
+```
+
+### Deno
+
+```sh
+deno run --allow-ffi --allow-read npm:avif
+```
+### Bun
+
+```sh
+bun x avif
+```
+
+### yarn
+```
+yarn_node_linker=pnpm yarn dlx avif
+```
 
 ## Options
 
