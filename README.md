@@ -1,9 +1,9 @@
 # avif-cli
 
 Command line utility to convert images to AVIF,
-requires a Node-ABI v9 compatible runtime:
+requires a Node-API v9 compatible runtime:
 
-- Node.js 18+
+- Node.js 18.17.0+
 - Deno
 - Bun
 
