@@ -30,6 +30,7 @@ pnpm dlx avif
 ```sh
 deno run --allow-ffi --allow-read npm:avif
 ```
+
 ### Bun
 
 ```sh
@@ -37,8 +38,9 @@ bun x avif
 ```
 
 ### yarn
-```
-yarn_node_linker=pnpm yarn dlx avif
+
+```sh
+yarn dlx avif
 ```
 
 ## Options
