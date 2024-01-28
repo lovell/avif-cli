@@ -58,6 +58,8 @@ Options:
       --lossless            Use lossless compression  [boolean] [default: false]
       --chroma-subsampling  Set to '4:2:0' to use chroma subsampling
                          [string] [choices: "4:2:0", "4:4:4"] [default: "4:4:4"]
+      --keep-metadata       Keep all metadata (EXIF, ICC, XMP, IPTC)
+                                                      [boolean] [default: false]
       --overwrite           Allow existing output files to be overwritten
                                                       [boolean] [default: false]
       --append-ext          Append .avif to the file name instead of replacing
@@ -79,5 +81,5 @@ npx avif --input="**/*.{jpg,jpeg}" --output="/another/path" --overwrite
 ```
 
 ```sh
-npx avif --input="images/*.*" --effort=0 --quality=30
+npx avif --input="images/*.*" --effort=0 --quality=30 --keep-metadata
 ```
