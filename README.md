@@ -51,6 +51,10 @@ Options:
                     [string] [default: "*.{jpg,jpeg,tif,tiff,webp,png,gif,svg}"]
       --output              Output directory, default is same directory as input
                                                           [string] [default: ""]
+      --cwd                 Directory that input is relative to, defaults to
+                            current working directory as reported by
+                            process.cwd()
+                                               [string] [default: process.cwd()]
       --quality             Quality vs file size, 1 (lowest/smallest) to 100
                             (highest/largest)             [number] [default: 50]
       --effort              CPU effort vs file size, 0 (fastest/largest) to 9
