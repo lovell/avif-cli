@@ -13,12 +13,13 @@ const {
   overwrite,
   appendExt,
   verbose,
+  cwd,
 } = require("../lib/cli");
 const { glob } = require("tinyglobby");
 const convert = require("../lib/convert");
 
 const avif = async () => {
-  const files = await glob([input], { absolute: true });
+  const files = await glob([input], { absolute: true, cwd });
   if (verbose) {
     process.stdout.write(`Found ${files.length} file(s) matching ${input}\n`);
   }
