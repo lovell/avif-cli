@@ -2,9 +2,12 @@
 
 const fs = require("fs").promises;
 const { constants } = require("fs");
+const path = require("path");
 const {
   input,
+  target,
   output,
+  recursive,
   lossless,
   quality,
   effort,
@@ -18,9 +21,17 @@ const { glob } = require("tinyglobby");
 const convert = require("../lib/convert");
 
 const avif = async () => {
-  const files = await glob([input], { absolute: true });
+  const prompt = `${input.replace(/\\/g, "/")}/**/*.{${target}}`; // Include all files in subdirectories
+
+  const files = await glob([prompt], {
+    absolute: true,
+    onlyFiles: true,
+    deep: recursive ? Infinity : 0, // Adjust depth based on recursive option
+  });
   if (verbose) {
-    process.stdout.write(`Found ${files.length} file(s) matching ${input}\n`);
+    process.stdout.write(
+      `Found ${files.length} file(s) matching ${input}\n`
+    );
   }
   if (output) {
     try {
@@ -30,10 +41,14 @@ const avif = async () => {
     }
   }
   const results = await Promise.all(
-    files.map((file) =>
-      convert({
+    files.map((file) => {
+      const relativePath = path.relative(input, file); // Correctly calculate relative path
+      const outputPath = recursive
+        ? path.join(output, path.dirname(relativePath)) // Maintain folder structure in output
+        : output; // Use flat structure if not recursive
+      return convert({
         input: file,
-        output,
+        output: outputPath,
         lossless,
         quality,
         effort,
@@ -42,9 +57,10 @@ const avif = async () => {
         overwrite,
         appendExt,
         verbose,
-      }),
-    ),
+      });
+    })
   );
   process.exit(results.every(Boolean) ? 0 : 1);
 };
+
 avif();

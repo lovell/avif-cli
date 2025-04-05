@@ -24,6 +24,7 @@
     "avif"
   ],
   "dependencies": {
+    "avif": "file:",
     "sharp": "^0.33.5",
     "tinyglobby": "^0.2.6",
     "yargs": "^17.7.2"
