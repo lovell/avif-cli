@@ -17,6 +17,10 @@
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
   "funding": {
     "url": "https://opencollective.com/libvips"
   },
@@ -24,11 +28,11 @@
     "avif"
   ],
   "dependencies": {
-    "sharp": "^0.34.2",
-    "tinyglobby": "^0.2.13",
+    "sharp": "^0.34.4",
+    "tinyglobby": "^0.2.15",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.6.2"
   }
 }
