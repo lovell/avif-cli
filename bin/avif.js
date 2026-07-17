@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
-import fs from "node:fs/promises";
-import { constants } from "node:fs";
+import fs, { constants } from "node:fs/promises";
+import path from "node:path";
 import { glob } from "tinyglobby";
 
 import {
@@ -42,7 +41,7 @@ const avif = async () => {
     files.map((file) =>
       convert({
         input: file,
-        output,
+        output: output && path.join(output, path.relative(cwd, file)),
         lossless,
         quality,
         effort,
