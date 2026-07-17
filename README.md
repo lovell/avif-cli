@@ -3,7 +3,7 @@
 Command line utility to convert images to AVIF,
 requires a Node-API v9 compatible runtime:
 
-- Node.js 18.17.0+
+- Node.js 20.19.0+
 - Deno
 - Bun
 

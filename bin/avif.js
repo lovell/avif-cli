@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require("fs").promises;
-const { constants } = require("fs");
-const {
+import fs from "node:fs/promises";
+import { constants } from "node:fs";
+import { glob } from "tinyglobby";
+
+import {
   input,
   output,
   lossless,
@@ -14,9 +16,8 @@ const {
   appendExt,
   verbose,
   cwd,
-} = require("../lib/cli");
-const { glob } = require("tinyglobby");
-const convert = require("../lib/convert");
+} from "../lib/cli.js";
+import convert from "../lib/convert.js";
 
 const avif = async () => {
   const files = await glob([input], { absolute: true, cwd });
