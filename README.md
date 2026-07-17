@@ -69,6 +69,10 @@ Options:
       --append-ext          Append .avif to the file name instead of replacing
                             the current extension (foo.jpg => foo.jpg.avif)
                                                       [boolean] [default: false]
+      --dry-run             Do not write any output files
+                                                      [boolean] [default: false]
+      --max-depth           Maximum depth to recurse into subdirectories
+                                                    [number] [default: Infinity]
       --verbose             Write progress to stdout  [boolean] [default: false]
   -h, --help                Show help                                  [boolean]
       --version             Show version number                        [boolean]

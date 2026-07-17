@@ -14,13 +14,20 @@ import {
   keepMetadata,
   overwrite,
   appendExt,
+  dryRun,
+  maxDepth,
   verbose,
   cwd,
 } from "../lib/cli.js";
 import convert from "../lib/convert.js";
 
 const avif = async () => {
-  const files = await glob([input], { absolute: true, cwd });
+  const files = await glob([input], {
+    absolute: true,
+    cwd,
+    deep: maxDepth,
+    onlyFiles: true,
+  });
   if (verbose) {
     process.stdout.write(`Found ${files.length} file(s) matching ${input}\n`);
   }
@@ -43,6 +50,7 @@ const avif = async () => {
         keepMetadata,
         overwrite,
         appendExt,
+        dryRun,
         verbose,
       }),
     ),
