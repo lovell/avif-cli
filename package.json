@@ -31,9 +31,9 @@
   "dependencies": {
     "sharp": "^0.35.3",
     "tinyglobby": "^0.2.17",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
-    "prettier": "^3.9.5"
+    "prettier": "^3.9.6"
   }
 }
